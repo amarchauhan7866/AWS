@@ -43,10 +43,12 @@ yum install awscli
 aws-cli/1.14.28 Python/2.7.5 Linux/3.10.0-862.2.3.el7.x86_64 botocore/1.8.35
 
 Configured the ASWaccess key and AWSSecretKey under the directory
+
 vim  ~/.aws/config
 
 and set the accesskey path under the .bashrc dircetory 
 vim ~/.bashrc
+
 export AWS_CONFIG_FILE=$HOME/.aws/config
 
 ###################################################
@@ -57,6 +59,7 @@ Created Key Pair & Save the key in local system
  aws ec2 create-key-pair --key-name devenv-key --query 'KeyMaterial' --output text > devenv-key.pem
 
 Created the Security Group
+
  aws ec2 create-security-group --group-name devqa-sg --vpc-id vpc-c90b47ae --description "security group for development environment"
  
  
