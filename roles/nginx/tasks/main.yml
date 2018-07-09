@@ -1,0 +1,12 @@
+---
+- include: ubuntu.yml
+  when: ansible_os_family == 'Debian'
+  tags: task_ubuntu
+
+- include: redhat.yml
+  when: ansible_os_family == 'RedHat'
+  tags: task_redhat
+
+
+
+
